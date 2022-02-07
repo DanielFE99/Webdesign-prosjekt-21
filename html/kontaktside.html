@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/kontaktsidecss.css">
+	<link rel="stylesheet" href="../css/traincss.css">
+
+  <!--Fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+	<title>Get in contact</title>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="index.html#bybane">Back to Slideshow</a>
+</div>
+
+<!--brukt W3school til informasjon-->
+<div class="container">
+	<h1>Contact Form</h1>
+  <form action="nothing.php">
+    <label for="fname">Full Name</label>
+    <input type="text" id="fname" name="fullname" placeholder="Your full name...">
+
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="Your email for response...">
+
+    <label for="category">Category</label>
+    <select id="category" name="category">
+      <option value="">Feedback</option>
+      <option value="">Questions about travel</option>
+      <option value="">Technical errors</option>
+      <option value="">Business inquieries</option>
+      <option value="">Other</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write your message here.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<footer>
+	 Website made by Daniel and Sunniva
+</footer>
+</body>
+
+</html>

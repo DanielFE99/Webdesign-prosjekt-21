@@ -1,0 +1,254 @@
+body {
+  margin: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: green;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+#focused {
+  background-color: #ddd;
+  color: black;
+}
+
+header {
+  background: linear-gradient(green, #fff);
+  padding: 120px 20px 160px;
+  text-align: center;
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 9% 50% 36% 3%;
+  grid-template-areas: '... text image ...';
+  grid-gap: 2%;
+  padding: 100px 0px 100px 0px;
+}
+
+/*grid plasseringer for grid-container*/
+#sykkel {
+  width: 100%;
+  grid-area: image;
+  border-radius: 15%;
+}
+
+.grid-container .bigarea {
+  grid-area: text;
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+  color: #fff;
+}
+
+header h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  color: #fff;
+}
+
+.contact-us {
+  text-align: center;
+  padding: 70px 0px 70px 0px;
+  background-color: #546e7a;
+  color: white;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-us a {
+  color: #fff;
+  font-style: italic;
+}
+
+footer {
+  background-color: whitesmoke;
+  padding: 15px 0px 15px 0px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+}
+
+.gridheading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+}
+
+.introtext {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+.maintext {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+/*assignment 9 only CSS*/
+summary {
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Montserrat', sans-serif;
+  color: whitesmoke;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background: linear-gradient(green, #fff);
+}
+
+summary:hover {
+  font-size: 40px;
+}
+
+details > summary {
+    list-style-type: '👉';
+}
+
+details[open] > summary {
+    list-style-type: '👇';
+}
+
+details {
+  background: linear-gradient(green, #fff);
+  border-bottom: 0.1px solid white;
+}
+
+/*Denne boksen er for at teksboksen selv skal være hvit*/
+.detailsgrid, .interview {
+  background-color: white;
+  margin-right: 5%;
+  margin-left: 5%;
+  padding-top: 2%;
+}
+
+.detailsgrid p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  grid-area: info;
+  padding-right: 5px;
+}
+
+.detailsgrid {
+  display: grid;
+  grid-template-columns: 40% 50%;
+  grid-template-areas: 'info selfie';
+}
+
+#personinfo {
+  grid-area: info;
+  text-align: right;
+}
+
+#selfie {
+  grid-area: selfie;
+  width: 40%;
+  border-radius: 100%;
+}
+
+.interview {
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.question {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+.answer {
+  padding-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+/**/
+
+/*Omvendt grid*/
+.grid-container-flipped {
+  display: grid;
+  grid-template-columns: 3% 36% 50% 9%;
+  grid-template-areas: '... image text ...';
+  grid-gap: 2%;
+  background-color: #f1f1f1;
+  padding: 100px 0px 100px 0px;
+}
+
+.grid-container-flipped .bigarea {
+  grid-area: text;
+}
+
+#bybanen2 {
+  width: 100%;
+  grid-area: image;
+  border-radius: 15%;
+}
+
+/* FOR MOBIL og mindre skjermer */
+@media only screen and (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 10% 80% 10%;
+    grid-template-areas: '... main ...';
+  }
+  #sykkel {
+    grid-area: main;
+  }
+  .grid-container .bigarea {
+    grid-area: main;
+    padding-top: 85%;
+  }
+
+  .grid-container-flipped {
+    grid-template-columns: 10% 80% 10%;
+    grid-template-areas: '... main ...';
+  }
+  #bybanen2 {
+    grid-area: main;
+  }
+  .grid-container-flipped .bigarea {
+    grid-area: main;
+    padding-top: 85%;
+  }
+
+  header h1 {
+    font-size: 30px;
+  }
+
+  header h2 {
+    font-size: 22px;
+  }
+
+  summary {
+    font-size: 20px;
+  }
+/*kun for å fjerne hover effekten på PC*/
+  summary:hover {
+    font-size: 20px;
+  }
+
+  #selfie {
+    width: 90%;
+    padding-bottom: 2%;
+  }
+
+}
